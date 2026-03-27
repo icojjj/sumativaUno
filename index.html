@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluación Sumativa 1 - Frontend</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado principal -->
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <h1>MiPortfolio</h1>
+        </div>
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+          &#9776;
+        </button>
+        <ul class="navbar__menu" id="navMenu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sección Hero -->
+      <section class="hero" id="inicio">
+        <div class="hero__content">
+          <h2 class="hero__title">Hola, soy <span class="highlight">Estudiante Frontend</span></h2>
+          <p class="hero__subtitle">Apasionado por crear experiencias web increíbles</p>
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn--outline">Contáctame</a>
+        </div>
+      </section>
+
+      <!-- Sección Sobre mí -->
+      <section class="section" id="sobre-mi">
+        <div class="container">
+          <h2 class="section__title">Sobre mí</h2>
+          <div class="about">
+            <div class="about__avatar">
+              <div class="avatar-placeholder">👨‍💻</div>
+            </div>
+            <div class="about__text">
+              <p>
+                Soy estudiante de desarrollo frontend con pasión por el diseño web
+                y la experiencia del usuario. Me especializo en crear interfaces
+                atractivas, funcionales y accesibles usando HTML, CSS y JavaScript.
+              </p>
+              <p>
+                Actualmente cursando la carrera de Ingeniería en Informática,
+                enfocado en las tecnologías web modernas y las mejores prácticas
+                del desarrollo frontend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Habilidades -->
+      <section class="section section--alt" id="habilidades">
+        <div class="container">
+          <h2 class="section__title">Habilidades</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-card__icon">🌐</div>
+              <h3 class="skill-card__name">HTML5</h3>
+              <div class="skill-card__bar">
+                <div class="skill-card__fill" style="--skill-level: 90%"></div>
+              </div>
+              <span class="skill-card__percent">90%</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__icon">🎨</div>
+              <h3 class="skill-card__name">CSS3</h3>
+              <div class="skill-card__bar">
+                <div class="skill-card__fill" style="--skill-level: 80%"></div>
+              </div>
+              <span class="skill-card__percent">80%</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__icon">⚡</div>
+              <h3 class="skill-card__name">JavaScript</h3>
+              <div class="skill-card__bar">
+                <div class="skill-card__fill" style="--skill-level: 70%"></div>
+              </div>
+              <span class="skill-card__percent">70%</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__icon">📱</div>
+              <h3 class="skill-card__name">Diseño Responsivo</h3>
+              <div class="skill-card__bar">
+                <div class="skill-card__fill" style="--skill-level: 85%"></div>
+              </div>
+              <span class="skill-card__percent">85%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Proyectos -->
+      <section class="section" id="proyectos">
+        <div class="container">
+          <h2 class="section__title">Proyectos</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-card__image">🛒</div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Tienda Online</h3>
+                <p class="project-card__desc">
+                  Página de comercio electrónico con catálogo de productos,
+                  carrito de compras y formulario de pago.
+                </p>
+                <div class="project-card__tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card__image">📋</div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Lista de Tareas</h3>
+                <p class="project-card__desc">
+                  Aplicación para gestionar tareas con funcionalidades de
+                  agregar, completar y eliminar pendientes.
+                </p>
+                <div class="project-card__tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card__image">🌤️</div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">App del Clima</h3>
+                <p class="project-card__desc">
+                  Aplicación que muestra el pronóstico del tiempo usando
+                  datos en tiempo real y diseño adaptable.
+                </p>
+                <div class="project-card__tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Contacto -->
+      <section class="section section--alt" id="contacto">
+        <div class="container">
+          <h2 class="section__title">Contacto</h2>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Tu nombre completo"
+                required
+              />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@correo.com"
+                required
+              />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+              ></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+            <p class="form-success" id="formSuccess"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="currentYear"></span> MiPortfolio. Evaluación Sumativa 1 - Frontend.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
