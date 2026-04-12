@@ -1,339 +1,495 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Celestial Skyline | El Monolito Vertical</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-primary": "#393000",
-              "on-tertiary": "#2f3131",
-              "on-primary-fixed": "#211b00",
-              "primary": "#dac769",
-              "on-surface": "#e2e2e5",
-              "inverse-surface": "#e2e2e5",
-              "background": "#121416",
-              "on-secondary-fixed-variant": "#930015",
-              "surface-container-lowest": "#0c0e10",
-              "on-error": "#690005",
-              "surface-container": "#1e2022",
-              "primary-fixed": "#f7e382",
-              "inverse-on-surface": "#2f3133",
-              "secondary": "#ffb3ae",
-              "surface-variant": "#333537",
-              "on-tertiary-fixed": "#1a1c1c",
-              "tertiary-fixed-dim": "#c6c6c6",
-              "tertiary-fixed": "#e3e2e2",
-              "tertiary": "#c6c6c6",
-              "surface-dim": "#121416",
-              "surface-tint": "#dac769",
-              "on-secondary-fixed": "#410004",
-              "surface": "#121416",
-              "primary-fixed-dim": "#dac769",
-              "primary-container": "#a1913a",
-              "surface-bright": "#37393b",
-              "on-secondary-container": "#ffe1df",
-              "secondary-container": "#d20123",
-              "on-secondary": "#68000c",
-              "secondary-fixed": "#ffdad7",
-              "surface-container-low": "#1a1c1e",
-              "on-surface-variant": "#c4c7cc",
-              "outline-variant": "#43474c",
-              "outline": "#8e9196",
-              "surface-container-high": "#282a2c",
-              "on-tertiary-fixed-variant": "#464747",
-              "on-primary-container": "#312a00",
-              "surface-container-highest": "#333537",
-              "secondary-fixed-dim": "#ffb3ae",
-              "on-primary-fixed-variant": "#524700",
-              "inverse-primary": "#6c5e06",
-              "on-error-container": "#ffdad6",
-              "tertiary-container": "#909191",
-              "on-tertiary-container": "#282a2a",
-              "error": "#ffb4ab",
-              "error-container": "#93000a",
-              "on-background": "#e2e2e5"
-            },
-            fontFamily: {
-              "headline": ["Noto Serif"],
-              "body": ["Manrope"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="Celestial Skyline: Descubre las maravillas arquitectónicas de los rascacielos más icónicos de China. Explora el Shanghai Tower, Ping An Center y CITIC Tower." />
+  <meta name="author" content="Celestial Skyline" />
+  <meta name="theme-color" content="#121416" />
+  <title>Celestial Skyline | El Monolito Vertical</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@300;400;600&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary": "#393000",
+            "on-tertiary": "#2f3131",
+            "on-primary-fixed": "#211b00",
+            "primary": "#dac769",
+            "on-surface": "#e2e2e5",
+            "inverse-surface": "#e2e2e5",
+            "background": "#121416",
+            "on-secondary-fixed-variant": "#930015",
+            "surface-container-lowest": "#0c0e10",
+            "on-error": "#690005",
+            "surface-container": "#1e2022",
+            "primary-fixed": "#f7e382",
+            "inverse-on-surface": "#2f3133",
+            "secondary": "#ffb3ae",
+            "surface-variant": "#333537",
+            "on-tertiary-fixed": "#1a1c1c",
+            "tertiary-fixed-dim": "#c6c6c6",
+            "tertiary-fixed": "#e3e2e2",
+            "tertiary": "#c6c6c6",
+            "surface-dim": "#121416",
+            "surface-tint": "#dac769",
+            "on-secondary-fixed": "#410004",
+            "surface": "#121416",
+            "primary-fixed-dim": "#dac769",
+            "primary-container": "#a1913a",
+            "surface-bright": "#37393b",
+            "on-secondary-container": "#ffe1df",
+            "secondary-container": "#d20123",
+            "on-secondary": "#68000c",
+            "secondary-fixed": "#ffdad7",
+            "surface-container-low": "#1a1c1e",
+            "on-surface-variant": "#c4c7cc",
+            "outline-variant": "#43474c",
+            "outline": "#8e9196",
+            "surface-container-high": "#282a2c",
+            "on-tertiary-fixed-variant": "#464747",
+            "on-primary-container": "#312a00",
+            "surface-container-highest": "#333537",
+            "secondary-fixed-dim": "#ffb3ae",
+            "on-primary-fixed-variant": "#524700",
+            "inverse-primary": "#6c5e06",
+            "on-error-container": "#ffdad6",
+            "tertiary-container": "#909191",
+            "on-tertiary-container": "#282a2a",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "on-background": "#e2e2e5"
           },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
         },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --color-primary: #dac769;
+      --color-bg: #121416;
+      --color-surface: #121416;
+      --color-text: #e2e2e5;
+      --color-text-variant: #c4c7cc;
+      --color-outline: #8e9196;
+      --font-headline: 'Noto Serif', serif;
+      --font-body: 'Manrope', sans-serif;
+      --font-label: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: clamp(14px, 1vw + 10px, 18px);
+    }
+
+    *:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+    }
+
+    .serif-tight {
+      font-family: var(--font-headline);
+      letter-spacing: -0.02em;
+    }
+
+    .monolith-gradient {
+      background: linear-gradient(180deg, rgba(18,20,22,0) 0%, rgba(18,20,22,1) 100%);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--color-primary);
+      color: #000;
+      padding: 1rem 2rem;
+      z-index: 100;
+      font-weight: bold;
+      font-family: var(--font-body);
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #121416;
-            color: #e2e2e5;
-            font-family: 'Manrope', sans-serif;
-        }
-        .serif-tight {
-            font-family: 'Noto Serif', serif;
-            letter-spacing: -0.02em;
-        }
-        .monolith-gradient {
-            background: linear-gradient(180deg, rgba(18,20,22,0) 0%, rgba(18,20,22,1) 100%);
-        }
-    </style>
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    @media (max-width: 639px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-slate-900/60 backdrop-blur-xl shadow-[0_12px_48px_rgba(0,0,0,0.05)] h-20 flex justify-between items-center px-6 md:px-12">
-<div class="text-2xl font-bold text-[#dac769] font-['Noto_Serif'] tracking-tight">Celestial Skyline</div>
-<nav class="hidden md:flex items-center space-x-8">
-<a class="text-[#dac769] border-b-2 border-[#dac769] pb-1 font-['Noto_Serif'] transition-colors" href="#">Torres Icónicas</a>
-<a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif']" href="#">Perfiles Urbanos</a>
-<a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif']" href="#">Maravillas de la Ingeniería</a>
-<a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif']" href="#">Contacto</a>
-</nav>
-<div class="flex items-center space-x-6">
-<div class="hidden sm:flex space-x-4">
-<span class="material-symbols-outlined text-[#e2e2e5] hover:bg-white/5 p-2 rounded cursor-pointer transition-all">language</span>
-<span class="material-symbols-outlined text-[#e2e2e5] hover:bg-white/5 p-2 rounded cursor-pointer transition-all">search</span>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform">Consultar</button>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative h-screen w-full flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Skyline de Pudong en Shanghái de noche" class="w-full h-full object-cover" data-alt="Fotografía real del skyline de Pudong en Shanghái durante la noche" src="https://upload.wikimedia.org/wikipedia/commons/3/37/The_skyline_of_Pudong_at_night.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
-<div class="absolute inset-0 monolith-gradient"></div>
-</div>
-<div class="relative z-10 px-6 md:px-24 max-w-5xl">
-<h1 class="text-5xl md:text-8xl font-headline serif-tight leading-tight mb-6">
-                    Celestial Skyline: <br/>
-          <span class="text-primary">El Monolito Vertical</span> <br/>
-                    de la China Moderna
-                </h1>
-<p class="text-xl md:text-2xl font-body font-light text-tertiary max-w-2xl mb-10">
-                    Descubre las maravillas arquitectónicas que definen el futuro de la vida urbana, donde el prestigio de la ingeniería se encuentra con la ambición de tocar el cielo.
-                </p>
-<div class="flex items-center space-x-8">
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <header role="banner" class="fixed top-0 w-full z-50 bg-slate-900/60 backdrop-blur-xl shadow-[0_12px_48px_rgba(0,0,0,0.05)] h-20 flex justify-between items-center px-6 md:px-12">
+    <a href="#" class="text-2xl font-bold text-[#dac769] font-['Noto_Serif'] tracking-tight" aria-label="Celestial Skyline - Inicio">Celestial Skyline</a>
+
+    <nav aria-label="Navegación principal" class="hidden md:flex items-center space-x-8">
+      <a class="text-[#dac769] border-b-2 border-[#dac769] pb-1 font-['Noto_Serif'] transition-colors" href="#torres">Torres Icónicas</a>
+      <a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif']" href="#intro">Perfiles Urbanos</a>
+      <a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif']" href="#stats">Maravillas de la Ingeniería</a>
+      <a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif']" href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="flex items-center space-x-4">
+      <div class="hidden sm:flex space-x-4">
+        <button aria-label="Cambiar idioma" class="material-symbols-outlined text-[#e2e2e5] hover:bg-white/5 p-2 rounded transition-all">language</button>
+        <button aria-label="Buscar contenido" class="material-symbols-outlined text-[#e2e2e5] hover:bg-white/5 p-2 rounded transition-all">search</button>
+      </div>
+      <button class="bg-primary text-on-primary px-6 py-2 font-bold hover:scale-95 duration-200 transition-transform">Consultar</button>
+      <button id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden material-symbols-outlined text-[#e2e2e5] p-2 rounded hover:bg-white/5 transition-all">menu</button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" aria-label="Menú de navegación móvil" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-surface-container-lowest z-[60] flex flex-col pt-24 px-8 gap-6 md:hidden shadow-2xl">
+    <button id="menu-close" aria-label="Cerrar menú de navegación" class="absolute top-6 right-6 material-symbols-outlined text-[#e2e2e5] p-2 rounded hover:bg-white/5 transition-all">close</button>
+    <a class="text-[#dac769] font-['Noto_Serif'] text-lg" href="#torres">Torres Icónicas</a>
+    <a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif'] text-lg" href="#intro">Perfiles Urbanos</a>
+    <a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif'] text-lg" href="#stats">Maravillas de la Ingeniería</a>
+    <a class="text-[#e2e2e5] hover:text-[#dac769] transition-colors font-['Noto_Serif'] text-lg" href="#contacto">Contacto</a>
+  </nav>
+  <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden md:hidden" aria-hidden="true"></div>
+
+  <main id="main-content" role="main">
+
+    <section aria-labelledby="hero-title" class="relative h-screen w-full flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img alt="Skyline de Pudong en Shanghái de noche con rascacielos iluminados reflejándose en el río Huangpu" class="w-full h-full object-cover" src="https://upload.wikimedia.org/wikipedia/commons/3/37/The_skyline_of_Pudong_at_night.jpg" />
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" aria-hidden="true"></div>
+        <div class="absolute inset-0 monolith-gradient" aria-hidden="true"></div>
+      </div>
+      <div class="relative z-10 px-6 md:px-24 max-w-5xl">
+        <h1 id="hero-title" class="hero-title text-5xl md:text-8xl font-headline serif-tight leading-tight mb-6">
+          Celestial Skyline: <br />
+          <span class="text-primary">El Monolito Vertical</span> <br />
+          de la China Moderna
+        </h1>
+        <p class="hero-subtitle text-xl md:text-2xl font-body font-light text-tertiary max-w-2xl mb-10">
+          Descubre las maravillas arquitectónicas que definen el futuro de la vida urbana, donde el prestigio de la ingeniería se encuentra con la ambición de tocar el cielo.
+        </p>
+        <div class="flex items-center space-x-8">
           <button class="bg-primary text-on-primary px-10 py-4 font-bold text-lg hover:bg-primary-fixed transition-colors">Explorar Galería</button>
-<div class="flex items-center space-x-2 text-primary font-label uppercase tracking-widest text-sm">
-          <span>Desliza para bajar</span>
-<span class="material-symbols-outlined animate-bounce">arrow_downward</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Intro Section -->
-<section class="py-24 md:py-48 px-6 md:px-12 bg-surface">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-<div class="md:col-span-7">
-<h2 class="text-4xl md:text-6xl font-headline serif-tight mb-12">El Cenit de la <br/>Visión Estructural</h2>
-<div class="space-y-6 text-lg text-on-surface-variant font-body leading-relaxed max-w-2xl">
-<p>El auge de los rascacielos en China es más que una carrera por la altura; es una manifestación de identidad nacional y poder tecnológico. En las últimas tres décadas, el perfil urbano pasó de edificios bajos tradicionales al bosque de supertorres más denso del mundo.</p>
-<p>Desde las curvas resistentes al viento de la Torre de Shanghái hasta la precisión afilada de los centros financieros de Shenzhen, estas estructuras representan una síntesis entre la geomancia ancestral y la ingeniería sísmica de vanguardia.</p>
-</div>
-</div>
-<div class="md:col-span-5 relative">
-<div class="aspect-[3/4] bg-surface-container-high overflow-hidden">
-<img alt="Detalle arquitectónico de rascacielos" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Fotografía real de fachada de acero y vidrio en un rascacielos" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Shanghai_-_Shanghai_Tower_-_0003%28cropped%29.jpg"/>
-</div>
-<div class="absolute -bottom-8 -left-8 bg-primary p-8 hidden md:block">
-<p class="text-on-primary font-headline text-2xl font-bold">1990 — 2024</p>
-<p class="text-on-primary font-label text-xs uppercase tracking-widest mt-2">La Era Dorada de las Alturas</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Towers Section -->
-<section class="py-24 bg-surface-container-lowest">
-<div class="px-6 md:px-12 max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-<div>
-<span class="text-primary font-label uppercase tracking-[0.3em] text-xs">Selección</span>
-<h2 class="text-4xl md:text-5xl font-headline serif-tight mt-4">El Gran Triunvirato</h2>
-</div>
-<p class="text-tertiary max-w-md font-body">Las agujas más representativas de los tres grandes polos económicos, cada una llevando al límite lo estructuralmente posible.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Shanghai Tower -->
-<div class="group">
-<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
-<img alt="Shanghai Tower" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Fotografía real de la Shanghai Tower" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Shanghai_-_Shanghai_Tower_-_0003%28cropped%29.jpg"/>
-</div>
-<div class="bg-surface-container-high p-8">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-2xl font-headline">Shanghai Tower</h3>
-<span class="text-primary font-label text-sm">#1</span>
-</div>
-<p class="text-tertiary font-body text-sm mb-6">La estructura torsionada más alta del mundo, con una fachada de doble piel de vidrio que reduce las cargas de viento en un 24%.</p>
-<div class="flex items-center space-x-4 border-t border-outline-variant/20 pt-6">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-outline">Altura</span>
-<span class="font-label font-bold text-on-surface">632 metros</span>
-</div>
-<div class="flex flex-col ml-auto">
-<span class="text-[10px] uppercase tracking-widest text-outline">Ubicación</span>
-<span class="font-label font-bold text-on-surface">Shanghai</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Ping An Finance Center -->
-<div class="group md:mt-16">
-<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
-<img alt="Ping An Finance Center" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Fotografía real del Ping An Finance Center en Shenzhen" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Pingan_International_Finance_Center2020.jpg"/>
-</div>
-<div class="bg-surface-container-high p-8 border-b-4 border-secondary-container">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-2xl font-headline">Ping An Center</h3>
-<span class="text-primary font-label text-sm">#2</span>
-</div>
-<p class="text-tertiary font-body text-sm mb-6">El ancla del rápido ascenso de Shenzhen, con 1.700 toneladas de acero inoxidable 316L para máxima resistencia a la corrosión.</p>
-<div class="flex items-center space-x-4 border-t border-outline-variant/20 pt-6">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-outline">Altura</span>
-<span class="font-label font-bold text-on-surface">599 metros</span>
-</div>
-<div class="flex flex-col ml-auto">
-<span class="text-[10px] uppercase tracking-widest text-outline">Ubicación</span>
-<span class="font-label font-bold text-on-surface">Shenzhen</span>
-</div>
-</div>
-</div>
-</div>
-<!-- China Zun -->
-<div class="group">
-<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
-<img alt="China Zun" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Fotografía real de la torre CITIC China Zun en Pekín" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/China_Zun_in_2020.jpg"/>
-</div>
-<div class="bg-surface-container-high p-8">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-2xl font-headline">CITIC Tower</h3>
-<span class="text-primary font-label text-sm">#3</span>
-</div>
-<p class="text-tertiary font-body text-sm mb-6">Conocida como China Zun, su forma se inspira en una vasija ceremonial tradicional y se estrecha con elegancia hacia su base y su corona.</p>
-<div class="flex items-center space-x-4 border-t border-outline-variant/20 pt-6">
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-outline">Altura</span>
-<span class="font-label font-bold text-on-surface">528 metros</span>
-</div>
-<div class="flex flex-col ml-auto">
-<span class="text-[10px] uppercase tracking-widest text-outline">Ubicación</span>
-<span class="font-label font-bold text-on-surface">Beijing</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Stats Section -->
-<section class="py-32 relative overflow-hidden bg-background">
-<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
-<span class="text-[20rem] font-headline serif-tight text-white select-none leading-none">88</span>
-</div>
-<div class="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-24">
-<div class="flex flex-col">
-<span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">100+</span>
-<span class="text-on-surface font-label uppercase tracking-widest text-xs">Supertorres (300m+)</span>
-<div class="h-1 w-12 bg-primary mt-6"></div>
-</div>
-<div class="flex flex-col">
-<span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">2000</span>
-<span class="text-on-surface font-label uppercase tracking-widest text-xs">Rascacielos (200m+)</span>
-<div class="h-1 w-12 bg-primary mt-6"></div>
-</div>
-<div class="flex flex-col">
-<span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">120°</span>
-<span class="text-on-surface font-label uppercase tracking-widest text-xs">Rotación en Espiral</span>
-<div class="h-1 w-12 bg-primary mt-6"></div>
-</div>
-<div class="flex flex-col">
-<span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">#1</span>
-<span class="text-on-surface font-label uppercase tracking-widest text-xs">Líder Mundial</span>
-<div class="h-1 w-12 bg-primary mt-6"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Gallery Section -->
-<section class="py-24 bg-surface">
-<div class="px-6 md:px-12 max-w-7xl mx-auto mb-16">
-<h2 class="text-4xl font-headline serif-tight text-center">Siluetas Metropolitanas</h2>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 h-[800px]">
-<div class="col-span-2 row-span-2 relative group overflow-hidden">
-<img alt="Skyline de Shenzhen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fotografía real del skyline de Shenzhen al atardecer" src="https://upload.wikimedia.org/wikipedia/commons/8/80/The_panorama_of_Futian_Shenzhen.jpg"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-<p class="font-headline text-3xl">Shenzhen</p>
-</div>
-</div>
-<div class="col-span-1 row-span-1 relative group overflow-hidden">
-<img alt="Skyline de Guangzhou" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fotografía real de la Canton Tower y el skyline de Guangzhou" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Guangzhou_Skyline_20210522-01.jpg"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-<p class="font-headline text-xl">Guangzhou</p>
-</div>
-</div>
-<div class="col-span-1 row-span-2 relative group overflow-hidden">
-<img alt="Distrito financiero de Pekín" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fotografía real del distrito financiero de Pekín" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Beijing_skyline_%28cropped%29.jpg"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-<p class="font-headline text-xl">Beijing</p>
-</div>
-</div>
-<div class="col-span-1 row-span-1 relative group overflow-hidden">
-<img alt="Skyline de Hong Kong" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fotografía real del skyline de Hong Kong y Victoria Harbour" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Victoria_Harbour_skyscrapers.jpg"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-<p class="font-headline text-xl">Hong Kong</p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-32 px-6 bg-surface-container">
-<div class="max-w-4xl mx-auto text-center border border-primary/20 p-12 md:p-24 relative">
-<div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-primary"></div>
-<div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-primary"></div>
-<h2 class="text-4xl md:text-6xl font-headline serif-tight mb-8">Vive las Alturas</h2>
-<p class="text-lg md:text-xl text-tertiary font-body mb-12 max-w-2xl mx-auto">Consulta por recorridos arquitectónicos exclusivos, casos técnicos de estudio y expediciones fotográficas al corazón de las megaciudades de China.</p>
-<div class="flex flex-col md:flex-row justify-center items-center gap-6">
-<button class="bg-primary text-on-primary px-12 py-5 font-bold hover:bg-primary-fixed transition-colors w-full md:w-auto">Solicitar Folleto</button>
-<button class="text-primary border border-primary/40 px-12 py-5 font-bold hover:bg-white/5 transition-colors w-full md:w-auto">Contactar Especialista</button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-[#0c0e10] w-full py-16 border-t border-[#43474c]/20">
-<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-<div class="flex flex-col">
-<div class="text-xl font-bold text-[#dac769] font-['Noto_Serif'] mb-4">Celestial Skyline</div>
-<p class="text-[#8e9196] font-['Manrope'] text-sm max-w-xs leading-relaxed">Dedicados a la preservación y al estudio de logros arquitectónicos monumentales en todo el paisaje chino.</p>
-</div>
-<div class="grid grid-cols-2 gap-x-12 gap-y-4">
-<a class="text-[#8e9196] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Patrimonio Arquitectónico</a>
-<a class="text-[#8e9196] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Sostenibilidad</a>
-<a class="text-[#8e9196] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Kit de Prensa</a>
-<a class="text-[#8e9196] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Política de Privacidad</a>
-</div>
-<div class="flex space-x-6 text-[#dac769]">
-<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity">share</span>
-<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity">mail</span>
-<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity">apartment</span>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-[#43474c]/10 text-center md:text-left">
-<p class="text-[#8e9196] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] opacity-80">© 2024 Celestial Skyline. Todos los derechos reservados. Miembro de la Asociación Internacional de Edificios Altos y Hábitat Urbano.</p>
-</div>
-</footer>
-</body></html>
+          <div class="flex items-center space-x-2 text-primary font-label uppercase tracking-widest text-sm" aria-hidden="true">
+            <span>Desliza para bajar</span>
+            <span class="material-symbols-outlined animate-bounce">arrow_downward</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro" aria-labelledby="intro-title" class="fade-section py-24 md:py-48 px-6 md:px-12 bg-surface">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7">
+          <h2 id="intro-title" class="text-4xl md:text-6xl font-headline serif-tight mb-12">El Cenit de la <br />Visión Estructural</h2>
+          <div class="space-y-6 text-lg text-on-surface-variant font-body leading-relaxed max-w-2xl">
+            <p>El auge de los rascacielos en China es más que una carrera por la altura; es una manifestación de identidad nacional y poder tecnológico. En las últimas tres décadas, el perfil urbano pasó de edificios bajos tradicionales al bosque de supertorres más denso del mundo.</p>
+            <p>Desde las curvas resistentes al viento de la Torre de Shanghái hasta la precisión afilada de los centros financieros de Shenzhen, estas estructuras representan una síntesis entre la geomancia ancestral y la ingeniería sísmica de vanguardia.</p>
+          </div>
+        </div>
+        <div class="md:col-span-5 relative">
+          <figure class="aspect-[3/4] bg-surface-container-high overflow-hidden">
+            <img alt="Fachada de acero y vidrio de la Shanghai Tower con su característica forma torsionada" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Shanghai_-_Shanghai_Tower_-_0003%28cropped%29.jpg" />
+          </figure>
+          <div class="absolute -bottom-8 -left-8 bg-primary p-8 hidden md:block" aria-hidden="true">
+            <p class="text-on-primary font-headline text-2xl font-bold">1990 — 2024</p>
+            <p class="text-on-primary font-label text-xs uppercase tracking-widest mt-2">La Era Dorada de las Alturas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="torres" aria-labelledby="towers-title" class="fade-section py-24 bg-surface-container-lowest">
+      <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div>
+            <span class="text-primary font-label uppercase tracking-[0.3em] text-xs">Selección</span>
+            <h2 id="towers-title" class="text-4xl md:text-5xl font-headline serif-tight mt-4">El Gran Triunvirato</h2>
+          </div>
+          <p class="text-tertiary max-w-md font-body">Las agujas más representativas de los tres grandes polos económicos, cada una llevando al límite lo estructuralmente posible.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <article aria-label="Shanghai Tower" class="group">
+            <figure class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+              <img alt="Shanghai Tower con su fachada de doble piel de vidrio y forma espiral torsionada de 632 metros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Shanghai_-_Shanghai_Tower_-_0003%28cropped%29.jpg" />
+            </figure>
+            <div class="bg-surface-container-high p-8">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-headline">Shanghai Tower</h3>
+                <span class="text-primary font-label text-sm" aria-label="Posición número 1">#1</span>
+              </div>
+              <p class="text-tertiary font-body text-sm mb-6">La estructura torsionada más alta del mundo, con una fachada de doble piel de vidrio que reduce las cargas de viento en un 24%.</p>
+              <div class="flex items-center space-x-4 border-t border-outline-variant/20 pt-6">
+                <div class="flex flex-col">
+                  <span class="text-[10px] uppercase tracking-widest text-outline">Altura</span>
+                  <span class="font-label font-bold text-on-surface">632 metros</span>
+                </div>
+                <div class="flex flex-col ml-auto">
+                  <span class="text-[10px] uppercase tracking-widest text-outline">Ubicación</span>
+                  <span class="font-label font-bold text-on-surface">Shanghai</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article aria-label="Ping An Finance Center" class="group md:mt-16">
+            <figure class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+              <img alt="Ping An Finance Center en Shenzhen, torre de acero inoxidable de 599 metros con diseño aerodinámico" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Pingan_International_Finance_Center2020.jpg" />
+            </figure>
+            <div class="bg-surface-container-high p-8 border-b-4 border-secondary-container">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-headline">Ping An Center</h3>
+                <span class="text-primary font-label text-sm" aria-label="Posición número 2">#2</span>
+              </div>
+              <p class="text-tertiary font-body text-sm mb-6">El ancla del rápido ascenso de Shenzhen, con 1.700 toneladas de acero inoxidable 316L para máxima resistencia a la corrosión.</p>
+              <div class="flex items-center space-x-4 border-t border-outline-variant/20 pt-6">
+                <div class="flex flex-col">
+                  <span class="text-[10px] uppercase tracking-widest text-outline">Altura</span>
+                  <span class="font-label font-bold text-on-surface">599 metros</span>
+                </div>
+                <div class="flex flex-col ml-auto">
+                  <span class="text-[10px] uppercase tracking-widest text-outline">Ubicación</span>
+                  <span class="font-label font-bold text-on-surface">Shenzhen</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article aria-label="CITIC Tower - China Zun" class="group">
+            <figure class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+              <img alt="Torre CITIC China Zun en Pekín con su forma inspirada en vasija ceremonial tradicional de 528 metros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/China_Zun_in_2020.jpg" />
+            </figure>
+            <div class="bg-surface-container-high p-8">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-headline">CITIC Tower</h3>
+                <span class="text-primary font-label text-sm" aria-label="Posición número 3">#3</span>
+              </div>
+              <p class="text-tertiary font-body text-sm mb-6">Conocida como China Zun, su forma se inspira en una vasija ceremonial tradicional y se estrecha con elegancia hacia su base y su corona.</p>
+              <div class="flex items-center space-x-4 border-t border-outline-variant/20 pt-6">
+                <div class="flex flex-col">
+                  <span class="text-[10px] uppercase tracking-widest text-outline">Altura</span>
+                  <span class="font-label font-bold text-on-surface">528 metros</span>
+                </div>
+                <div class="flex flex-col ml-auto">
+                  <span class="text-[10px] uppercase tracking-widest text-outline">Ubicación</span>
+                  <span class="font-label font-bold text-on-surface">Beijing</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" aria-label="Estadísticas de rascacielos en China" class="fade-section py-32 relative overflow-hidden bg-background">
+      <div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none" aria-hidden="true">
+        <span class="text-[20rem] font-headline serif-tight text-white select-none leading-none">88</span>
+      </div>
+      <div class="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-24">
+          <figure class="flex flex-col">
+            <span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">100+</span>
+            <figcaption class="text-on-surface font-label uppercase tracking-widest text-xs">Supertorres (300m+)</figcaption>
+            <div class="h-1 w-12 bg-primary mt-6" aria-hidden="true"></div>
+          </figure>
+          <figure class="flex flex-col">
+            <span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">2000</span>
+            <figcaption class="text-on-surface font-label uppercase tracking-widest text-xs">Rascacielos (200m+)</figcaption>
+            <div class="h-1 w-12 bg-primary mt-6" aria-hidden="true"></div>
+          </figure>
+          <figure class="flex flex-col">
+            <span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">120°</span>
+            <figcaption class="text-on-surface font-label uppercase tracking-widest text-xs">Rotación en Espiral</figcaption>
+            <div class="h-1 w-12 bg-primary mt-6" aria-hidden="true"></div>
+          </figure>
+          <figure class="flex flex-col">
+            <span class="text-primary font-headline text-6xl md:text-7xl font-bold mb-4">#1</span>
+            <figcaption class="text-on-surface font-label uppercase tracking-widest text-xs">Líder Mundial</figcaption>
+            <div class="h-1 w-12 bg-primary mt-6" aria-hidden="true"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="gallery-title" class="fade-section py-24 bg-surface">
+      <div class="px-6 md:px-12 max-w-7xl mx-auto mb-16">
+        <h2 id="gallery-title" class="text-4xl font-headline serif-tight text-center">Siluetas Metropolitanas</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 h-[800px]">
+        <figure class="col-span-2 row-span-2 relative group overflow-hidden">
+          <img alt="Panorámica del skyline de Shenzhen al atardecer con las torres del distrito de Futian iluminadas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/8/80/The_panorama_of_Futian_Shenzhen.jpg" />
+          <figcaption class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+            <p class="font-headline text-3xl">Shenzhen</p>
+          </figcaption>
+        </figure>
+        <figure class="col-span-1 row-span-1 relative group overflow-hidden">
+          <img alt="Skyline de Guangzhou con la Canton Tower y los rascacielos del distrito financiero" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Guangzhou_Skyline_20210522-01.jpg" />
+          <figcaption class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="font-headline text-xl">Guangzhou</p>
+          </figcaption>
+        </figure>
+        <figure class="col-span-1 row-span-2 relative group overflow-hidden">
+          <img alt="Distrito financiero de Pekín con la torre CITIC China Zun y los edificios corporativos del CBD" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Beijing_skyline_%28cropped%29.jpg" />
+          <figcaption class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="font-headline text-xl">Beijing</p>
+          </figcaption>
+        </figure>
+        <figure class="col-span-1 row-span-1 relative group overflow-hidden">
+          <img alt="Skyline de Hong Kong y Victoria Harbour con los rascacielos de la isla de Hong Kong al atardecer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Victoria_Harbour_skyscrapers.jpg" />
+          <figcaption class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <p class="font-headline text-xl">Hong Kong</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="cta-title" class="fade-section py-32 px-6 bg-surface-container">
+      <div class="max-w-4xl mx-auto text-center border border-primary/20 p-12 md:p-24 relative">
+        <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-primary" aria-hidden="true"></div>
+        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-primary" aria-hidden="true"></div>
+        <h2 id="cta-title" class="text-4xl md:text-6xl font-headline serif-tight mb-8">Vive las Alturas</h2>
+        <p class="text-lg md:text-xl text-tertiary font-body mb-12 max-w-2xl mx-auto">Consulta por recorridos arquitectónicos exclusivos, casos técnicos de estudio y expediciones fotográficas al corazón de las megaciudades de China.</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+          <button class="bg-primary text-on-primary px-12 py-5 font-bold hover:bg-primary-fixed transition-colors w-full md:w-auto">Solicitar Folleto</button>
+          <button class="text-primary border border-primary/40 px-12 py-5 font-bold hover:bg-white/5 transition-colors w-full md:w-auto">Contactar Especialista</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo" class="bg-[#0c0e10] w-full py-16 border-t border-[#43474c]/20">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+      <div class="flex flex-col">
+        <div class="text-xl font-bold text-[#dac769] font-['Noto_Serif'] mb-4">Celestial Skyline</div>
+        <p class="text-[#a0a3a8] font-['Manrope'] text-sm max-w-xs leading-relaxed">Dedicados a la preservación y al estudio de logros arquitectónicos monumentales en todo el paisaje chino.</p>
+      </div>
+      <nav aria-label="Enlaces del sitio" class="grid grid-cols-2 gap-x-12 gap-y-4">
+        <a class="text-[#a0a3a8] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Patrimonio Arquitectónico</a>
+        <a class="text-[#a0a3a8] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Sostenibilidad</a>
+        <a class="text-[#a0a3a8] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Kit de Prensa</a>
+        <a class="text-[#a0a3a8] hover:text-[#e2e2e5] transition-colors font-['Manrope'] text-sm uppercase tracking-widest" href="#">Política de Privacidad</a>
+      </nav>
+      <div class="flex space-x-6 text-[#dac769]">
+        <a href="#" aria-label="Compartir en redes sociales" class="hover:opacity-80 transition-opacity">
+          <span class="material-symbols-outlined" aria-hidden="true">share</span>
+        </a>
+        <a href="#" aria-label="Enviar correo electrónico" class="hover:opacity-80 transition-opacity">
+          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        </a>
+        <a href="#" aria-label="Visitar sitio de la empresa" class="hover:opacity-80 transition-opacity">
+          <span class="material-symbols-outlined" aria-hidden="true">apartment</span>
+        </a>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-[#43474c]/10 text-center md:text-left">
+      <p class="text-[#a0a3a8] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] opacity-80">&copy; 2024 Celestial Skyline. Todos los derechos reservados. Miembro de la Asociación Internacional de Edificios Altos y Hábitat Urbano.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var menuToggle = document.getElementById('menu-toggle');
+      var menuClose = document.getElementById('menu-close');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var menuOverlay = document.getElementById('menu-overlay');
+
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        menuOverlay.classList.remove('hidden');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuClose.focus();
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        menuOverlay.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.focus();
+      }
+
+      menuToggle.addEventListener('click', openMenu);
+      menuClose.addEventListener('click', closeMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+
+      mobileMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+
+      var sections = document.querySelectorAll('.fade-section');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
+    })();
+  </script>
+
+</body>
+</html>
